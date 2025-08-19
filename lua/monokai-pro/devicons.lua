@@ -296,6 +296,36 @@ M.setup = function(c)
       cterm_color = "197",
       name = "GoSum",
     },
+    [".prettierrc"] = {
+      icon = "",
+      color = c.base.red,
+      name = "Pretterrc",
+    },
+    [".prettierignore"] = {
+      icon = "",
+      color = c.base.red,
+      name = "Pretterignore",
+    },
+    ["package.json"] = {
+      icon = "",
+      color = c.base.red,
+      name = "PackageJson",
+    },
+    ["package-lock.json"] = {
+      icon = "",
+      color = c.base.red,
+      name = "PackageJson",
+    },
+    ["html"] = {
+      icon = "",
+      color = c.base.blue,
+      name = "Html",
+    },
+    ["markdown"] = {
+      icon = "",
+      color = c.base.yellow,
+      name = "Markdown",
+    },
   }
   webDevicons.set_icon(icons)
 end

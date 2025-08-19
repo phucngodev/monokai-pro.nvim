@@ -1,9 +1,9 @@
 ---@type Palette
 return {
   dark2 = "#161b1e",
-  dark1 = "#1d2528",
+  dark1 = "#403e41",
   background = "#273136",
-  text = "#f2fffc",
+  text = "#d4d4d4",
   accent1 = "#ff6d7e",
   accent2 = "#ffb270",
   accent3 = "#ffed72",

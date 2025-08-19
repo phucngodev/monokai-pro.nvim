@@ -10,25 +10,17 @@ function M.get(c, config, _)
 
     NvimTreeIndentMarker = { link = "IndentBlanklineChar" },
 
-    NvimTreeNormal = { bg = sidebar_bg, fg = c.sideBar.foreground },
-    NvimTreeEndOfBuffer = {
-      bg = sidebar_bg,
-      fg = sidebar_bg,
-    },
-    NvimTreeWinSeparator = {
-      bg = c.editor.background,
-      fg = isBackgroundClear and c.base.black or c.editor.background,
-    },
+    NvimTreeNormal = { bg = c.editor.background, fg = c.sideBar.foreground },
+    NvimTreeEndOfBuffer = { bg = c.editor.background, fg = c.sideBar.foreground },
+    NvimTreeWinSeparator = { bg = c.editor.background, fg = c.base.dimmed5 },
+    NvimTreeExecFile = { fg = c.sideBar.foreground },
+    NvimTreeSpecialFile = { fg = c.sideBar.foreground },
 
     NvimTreeFolderName = { fg = c.sideBar.foreground },
     NvimTreeOpenedFolderName = { fg = c.sideBar.foreground, italic = true },
     NvimTreeEmptyFolderName = { fg = c.sideBar.foreground, italic = true },
     NvimTreeImageFile = { fg = c.base.white },
-    NvimTreeSpecialFile = { fg = c.base.white },
-    NvimTreeCursorLine = {
-      bg = c.list.activeSelectionBackground,
-      bg_base = sidebar_bg,
-    },
+    NvimTreeCursorLine = { bg = c.base.dimmed5 },
 
     NvimTreeGitIgnored = { fg = c.gitDecoration.ignoredResourceForeground },
     NvimTreeGitignoreIcon = { fg = c.gitDecoration.ignoredResourceForeground },
@@ -44,7 +36,6 @@ function M.get(c, config, _)
       fg = c.sideBarSectionHeader.foreground,
       bold = true,
     },
-    NvimTreeExecFile = { fg = c.base.green },
   }
 end
 

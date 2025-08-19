@@ -12,7 +12,7 @@ M.setup = function(c, config, hp)
     Conceal = { bg = c.editor.background, fg = c.base.dimmed3 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = {
       bg = c.base.white,
-      fg = c.base.white,
+      fg = c.base.red,
     }, -- character under the cursor
     -- lCursor      = {}, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM     = {bg = theme.palette.red}, -- like Cursor, but used when in IME mode |CursorIM|
@@ -58,7 +58,7 @@ M.setup = function(c, config, hp)
     }, -- error messages on the command line
     VertSplit = {
       bg = c.editor.background,
-      fg = c.base.black,
+      fg = c.base.dimmed5,
     }, -- the column separating vertically split windows
     Folded = {
       bg = c.editor.foldBackground,
@@ -76,8 +76,8 @@ M.setup = function(c, config, hp)
       fg = c.editorLineNumber.foreground,
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     MatchParen = {
+      bg = c.editor.background,
       fg = c.base.yellow,
-      bold = true,
       underline = true,
     }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = {
@@ -93,7 +93,7 @@ M.setup = function(c, config, hp)
       fg = c.base.yellow,
     }, -- |more-prompt| ufo
     NonText = {
-      fg = c.editor.background,
+      fg = c.base.dimmed5,
     }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|. Example the character space between words
     Normal = {
       bg = c.editor.background,
@@ -103,21 +103,11 @@ M.setup = function(c, config, hp)
       bg = c.editor.background,
       fg = c.editor.foreground,
     },
-    NormalFloat = float_winBackgroundClear and {
-      bg = c.editor.background,
-      fg = c.editorSuggestWidget.foreground,
-    } or {
-      -- bg = c.editorHoverWidget.background,
-      bg = c.base.black,
-      fg = c.base.dimmed1,
-    }, -- Normal text in floating windows. example PackerNormal
-    FloatBorder = float_winBackgroundClear and {
-      bg = c.editor.background,
-      fg = c.editorSuggestWidget.foreground,
-    } or {
-      bg = c.editor.background,
-      fg = c.base.black,
-    },
+
+    NormalFloat = { bg = c.editor.background },
+    NormalFloat = { bg = c.editor.background },
+    FloatBorder = { fg = c.base.dimmed5 },
+
     FloatTitle = float_winBackgroundClear and {
       bg = c.editor.background,
       fg = c.base.yellow,
@@ -126,13 +116,12 @@ M.setup = function(c, config, hp)
       bg = c.base.yellow,
       fg = c.base.black,
     },
-    Pmenu = float_winBackgroundClear and {
-      bg = c.editor.background,
-      fg = c.editorSuggestWidget.foreground,
-    } or {
-      bg = c.editorSuggestWidget.background,
-      fg = c.editorSuggestWidget.foreground,
-    }, -- Popup menu: normal item.
+
+    Pmenu = { bg = c.editor.background },
+    BlinkCmpMenu = { bg = c.editor.background },
+    BlinkCmpMenuBorder = { fg = c.base.dimmed5 },
+    BlinkCmpDocBorder = { fg = c.base.dimmed5 },
+
     PmenuSel = float_winBackgroundClear and {
       bg = hp.blend(c.editorSuggestWidget.selectedBackground, 0.7),
       bold = true,
@@ -168,13 +157,13 @@ M.setup = function(c, config, hp)
       bold = true,
     }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     StatusLine = {
-      bg = c.statusBar.background,
-      fg = c.statusBar.activeForeground,
+      bg = c.base.black,
+      fg = c.editor.foreground,
       reverse = false,
     }, -- status line of current window
     StatusLineNC = {
-      bg = c.statusBar.background,
-      fg = c.statusBar.foreground,
+      bg = c.base.black,
+      fg = c.editor.foreground,
     }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     StatusLineSeparator = { fg = c.statusBar.background },
     StatusLineTerm = { fg = c.statusBar.background },
@@ -200,7 +189,7 @@ M.setup = function(c, config, hp)
       fg = c.base.black,
     }, -- the column separating windows
     Whitespace = {
-      fg = c.base.dimmed4,
+      fg = c.base.dimmed5,
     }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     -- WildMenu = { bg = C.blue, fg = C.black }, -- current match in 'wildmenu' completion
 
@@ -220,6 +209,10 @@ M.setup = function(c, config, hp)
     healthError = { fg = c.base.red },
     healthSuccess = { fg = c.base.green },
     healthWarning = { fg = c.base.blue },
+
+    RenderMarkdownCode = { bg = c.editor.background },
+    RenderMarkdownDash = { bg = c.editor.background },
+    RenderMarkdownSign = { bg = c.editor.background },
   }
 end
 

@@ -12,7 +12,7 @@ function M.get(c, config, _)
 
     -- Booleans & Constants
     ["@boolean"]                          = { fg = c.base.magenta },
-    ["@constant"]                         = { fg = c.base.magenta },
+    ["@constant"]                         = { fg = c.base.white },
     ["@constant.builtin"]                 = { fg = c.base.magenta },
     ["@constant.macro"]                   = { fg = c.base.magenta },
 
@@ -47,24 +47,24 @@ function M.get(c, config, _)
     ["@keyword.repeat"]                   = { fg = c.base.red },
     ["@keyword.return"]                   = { fg = c.base.red },
     ["@keyword.storage"]                  = { fg = c.base.red },
-    ["@keyword.type"]                     = { fg = c.base.cyan, italic = true },
+    ["@keyword.type"]                     = { fg = c.base.red, italic = true },
 
     -- Numbers & Operators
     ["@number"]                           = { fg = c.base.magenta },
     ["@number.float"]                     = { fg = c.base.magenta },
-    ["@operator"]                         = { fg = c.base.red }, -- `==`, `*`, `+`, `-`
+    ["@operator"]                         = { fg = c.base.dimmed1 }, -- `==`, `*`, `+`, `-`
 
     -- Parameters & Variables
     ["@variable"]                         = { fg = c.base.white },
     ["@variable.builtin"]                 = { fg = c.base.dimmed1, italic = true },
     ["@variable.member"]                  = { fg = c.base.white },
-    ["@variable.parameter"]               = { fg = c.base.blue, italic = true },
-    ["@variable.parameter.builtin"]       = { fg = c.base.blue, italic = true },
+    ["@variable.parameter"]               = { fg = c.base.dimmed1, italic = true },
+    ["@variable.parameter.builtin"]       = { fg = c.base.dimmed1, italic = true },
 
     -- Punctuation
-    ["@punctuation.bracket"]              = { fg = c.base.red },
+    ["@punctuation.bracket"]              = { fg = c.base.white },
     ["@punctuation.delimiter"]            = { fg = c.base.dimmed2 },
-    ["@punctuation.special"]              = { fg = c.base.dimmed2 },
+    ["@punctuation.special"]              = { fg = c.base.red },
 
     -- Strings & Characters
     ["@string"]                           = { fg = c.base.yellow },
@@ -133,7 +133,7 @@ function M.get(c, config, _)
 
     -- Golang
     ["@keyword.function.go"]               = { fg = c.base.red },
-    ["@module.go"]                         = { fg = c.base.white },
+    ["@module.go"]                         = { fg = c.base.yellow },
     ["@string.escape.go"]                  = { fg = c.base.magenta },
 
     -- Latex

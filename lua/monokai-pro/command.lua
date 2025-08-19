@@ -8,13 +8,14 @@ M.create_filter_command = function()
 
   cmd("MonokaiProSelect", function()
     local menu = util.ui.create_menu("Set monokai filter", {
-      "classic",
+      "nocolor",
+      "pro",
+      "octagon",
       "light",
       "machine",
-      "octagon",
-      "pro",
       "ristretto",
       "spectrum",
+      "classic",
     }, function(item)
       local filter = item.value
       config.extend({ filter = filter })
@@ -39,6 +40,7 @@ M.create_filter_command = function()
         "pro",
         "ristretto",
         "spectrum",
+        "nocolor",
       }
     end,
   })
